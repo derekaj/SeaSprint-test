@@ -28,7 +28,7 @@
       <attributes>
         <text id="name">Note</text>
         <text id="bundleName">Note.behavior</text>
-        <text id="note">Saving and Loading Attributes does not work</text>
+        <text id="note">Saving and Loading Attributes does not work... And the Pause things don't show up in game</text>
       </attributes>
     </behavior>
     <behavior id="id431697" class="RuleBehavior" enabled="true">
@@ -146,15 +146,6 @@
             </attributes>
           </predicate>
         </condition>
-        <condition id="id120409" eventType="touch" pluginPredicateTypeIndex="0" class="Touch">
-          <attributes>
-            <text id="name">default name</text>
-            <index id="conditionType">0</index>
-          </attributes>
-          <predicate type="touch" conditionType="pressed">
-            <attributes />
-          </predicate>
-        </condition>
       </conditions>
       <behaviors>
         <behavior id="id186212" class="ChangeImageAction" enabled="true">
@@ -164,11 +155,31 @@
             <image id="image">Button_Resume</image>
           </attributes>
         </behavior>
-        <behavior id="id806947" class="UnpauseGameAction" enabled="true">
+        <behavior id="id228454" class="RuleBehavior" enabled="true">
           <attributes>
-            <text id="name">Unpause Game</text>
-            <text id="bundleName">UnpauseGame.behavior</text>
+            <text id="name">Rule</text>
+            <text id="bundleName">Rule.behavior</text>
+            <real id="compoundConditionKind">0</real>
           </attributes>
+          <conditions>
+            <condition id="id587048" eventType="touch" pluginPredicateTypeIndex="0" class="Touch">
+              <attributes>
+                <text id="name">default name</text>
+                <index id="conditionType">0</index>
+              </attributes>
+              <predicate type="touch" conditionType="pressed">
+                <attributes />
+              </predicate>
+            </condition>
+          </conditions>
+          <behaviors>
+            <behavior id="id806947" class="UnpauseGameAction" enabled="true">
+              <attributes>
+                <text id="name">Unpause Game</text>
+                <text id="bundleName">UnpauseGame.behavior</text>
+              </attributes>
+            </behavior>
+          </behaviors>
         </behavior>
       </behaviors>
       <elseBehaviors>
@@ -330,6 +341,80 @@
         </behavior>
       </elseBehaviors>
     </behavior>
+    <behavior id="id612710" class="RuleBehavior" enabled="true">
+      <attributes>
+        <text id="name">6.DistanceHeader and TextDisplay</text>
+        <text id="bundleName">Rule.behavior</text>
+        <real id="compoundConditionKind">0</real>
+      </attributes>
+      <conditions>
+        <condition id="id939893" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">self.attributes.id132513</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">=</text>
+              <real id="RHS">6</real>
+            </attributes>
+          </predicate>
+        </condition>
+        <condition id="id466254" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+          <attributes>
+            <index id="conditionType">1</index>
+            <text id="subjectAttribute">game.attributes.id789086</text>
+            <text id="name">default name</text>
+          </attributes>
+          <predicate type="number">
+            <attributes>
+              <text id="operator">&lt;=</text>
+              <real id="RHS">0</real>
+            </attributes>
+          </predicate>
+        </condition>
+      </conditions>
+      <behaviors>
+        <behavior id="id416105" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">Pause_TreasureTag</image>
+          </attributes>
+        </behavior>
+        <behavior id="id921359" class="DisplayTextBehavior" enabled="true">
+          <attributes>
+            <text id="name">Display Text</text>
+            <text id="bundleName">DisplayText.behavior</text>
+            <text id="text">
+              <expression>
+                <reference keypath="game.attributes.id106406" />
+              </expression>
+            </text>
+            <text id="font">Verdana</text>
+            <real id="size">60</real>
+            <index id="alignment">1</index>
+            <boolean id="wrap">false</boolean>
+            <color id="color">
+              <real id="red">0.4</real>
+              <real id="green">0.843137254901961</real>
+              <real id="blue">1</real>
+              <real id="alpha">1</real>
+            </color>
+          </attributes>
+        </behavior>
+      </behaviors>
+      <elseBehaviors>
+        <behavior id="id454923" class="ChangeImageAction" enabled="true">
+          <attributes>
+            <text id="name">Change Image</text>
+            <text id="bundleName">ChangeImage.behavior</text>
+            <image id="image">NULL</image>
+          </attributes>
+        </behavior>
+      </elseBehaviors>
+    </behavior>
     <behavior id="id582258" class="RuleBehavior" enabled="true">
       <attributes>
         <text id="name">7.NewRecord Graphic</text>
@@ -409,84 +494,10 @@
             <text id="name">Save Attribute</text>
             <text id="bundleName">SaveAttribute.behavior</text>
             <text id="targetAttribute">game.attributes.id300849</text>
-            <text id="key">HighestDistance</text>
+            <text id="key">"HighestDistance"</text>
           </attributes>
         </behavior>
       </behaviors>
-    </behavior>
-    <behavior id="id612710" class="RuleBehavior" enabled="true">
-      <attributes>
-        <text id="name">6.DistanceHeader and TextDisplay</text>
-        <text id="bundleName">Rule.behavior</text>
-        <real id="compoundConditionKind">0</real>
-      </attributes>
-      <conditions>
-        <condition id="id939893" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
-          <attributes>
-            <index id="conditionType">1</index>
-            <text id="subjectAttribute">self.attributes.id132513</text>
-            <text id="name">default name</text>
-          </attributes>
-          <predicate type="number">
-            <attributes>
-              <text id="operator">=</text>
-              <real id="RHS">6</real>
-            </attributes>
-          </predicate>
-        </condition>
-        <condition id="id466254" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
-          <attributes>
-            <index id="conditionType">1</index>
-            <text id="subjectAttribute">game.attributes.id789086</text>
-            <text id="name">default name</text>
-          </attributes>
-          <predicate type="number">
-            <attributes>
-              <text id="operator">&lt;=</text>
-              <real id="RHS">0</real>
-            </attributes>
-          </predicate>
-        </condition>
-      </conditions>
-      <behaviors>
-        <behavior id="id416105" class="ChangeImageAction" enabled="true">
-          <attributes>
-            <text id="name">Change Image</text>
-            <text id="bundleName">ChangeImage.behavior</text>
-            <image id="image">Pause_TreasureTag</image>
-          </attributes>
-        </behavior>
-        <behavior id="id921359" class="DisplayTextBehavior" enabled="true">
-          <attributes>
-            <text id="name">Display Text</text>
-            <text id="bundleName">DisplayText.behavior</text>
-            <text id="text">
-              <expression>
-                <reference keypath="game.attributes.id106406" />
-              </expression>
-            </text>
-            <text id="font">Verdana</text>
-            <real id="size">60</real>
-            <index id="alignment">1</index>
-            <boolean id="wrap">false</boolean>
-            <color id="color">
-              <real id="red">0.4</real>
-              <real id="green">0.843137254901961</real>
-              <real id="blue">1</real>
-              <real id="alpha">1</real>
-            </color>
-          </attributes>
-        </behavior>
-      </behaviors>
-      <elseBehaviors>
-        <behavior id="id454923" class="ChangeImageAction" enabled="true">
-          <attributes>
-            <text id="name">Change Image</text>
-            <text id="bundleName">ChangeImage.behavior</text>
-            <image id="image">NULL</image>
-          </attributes>
-        </behavior>
-      </elseBehaviors>
     </behavior>
   </behaviors>
   <aspects>

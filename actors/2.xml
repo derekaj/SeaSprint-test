@@ -55,6 +55,27 @@
         </behavior>
       </behaviors>
     </behavior>
+    <behavior id="id425703" class="DisplayTextBehavior" enabled="true">
+      <attributes>
+        <text id="name">Display Text</text>
+        <text id="bundleName">DisplayText.behavior</text>
+        <text id="text">
+          <expression>
+            <reference keypath="game.attributes.id789086" />
+          </expression>
+        </text>
+        <text id="font">Arial</text>
+        <real id="size">30</real>
+        <index id="alignment">1</index>
+        <boolean id="wrap">false</boolean>
+        <color id="color">
+          <real id="red">1</real>
+          <real id="green">1</real>
+          <real id="blue">1</real>
+          <real id="alpha">1</real>
+        </color>
+      </attributes>
+    </behavior>
     <behavior id="id986652" class="CompoundBehavior" enabled="true">
       <attributes>
         <text id="name">Movement</text>
@@ -422,6 +443,80 @@
                         <text id="name">Reset Game</text>
                         <text id="bundleName">ResetGame.behavior</text>
                         <boolean id="enableAdvertisement">false</boolean>
+                      </attributes>
+                    </behavior>
+                  </behaviors>
+                </behavior>
+                <behavior id="id366620" class="LoadAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Load Attribute</text>
+                    <text id="bundleName">LoadAtribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id760616</text>
+                    <text id="key">"TotalTreasure"</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id714927" class="ChangeAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Change Attribute</text>
+                    <text id="bundleName">ChangeAttribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id760616</text>
+                    <text id="RHS">
+                      <expression>
+                        <reference keypath="game.attributes.id760616" />
+                        <string xml:space="preserve">+</string>
+                        <reference keypath="game.attributes.id789219" />
+                      </expression>
+                    </text>
+                  </attributes>
+                </behavior>
+                <behavior id="id114207" class="SaveAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Save Attribute</text>
+                    <text id="bundleName">SaveAttribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id760616</text>
+                    <text id="key">"TotalTreasure"</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id338160" class="LoadAttributeAction" enabled="true">
+                  <attributes>
+                    <text id="name">Load Attribute</text>
+                    <text id="bundleName">LoadAtribute.behavior</text>
+                    <text id="targetAttribute">game.attributes.id300849</text>
+                    <text id="key">"HighestDistance"</text>
+                  </attributes>
+                </behavior>
+                <behavior id="id547861" class="RuleBehavior" enabled="true">
+                  <attributes>
+                    <text id="name">Rule</text>
+                    <text id="bundleName">Rule.behavior</text>
+                    <real id="compoundConditionKind">0</real>
+                  </attributes>
+                  <conditions>
+                    <condition id="id376962" eventType="mouse position" pluginPredicateTypeIndex="0" class="AttributeCondition">
+                      <attributes>
+                        <index id="conditionType">1</index>
+                        <text id="subjectAttribute">game.attributes.id300849</text>
+                        <text id="name">default name</text>
+                      </attributes>
+                      <predicate type="number">
+                        <attributes>
+                          <text id="operator">&lt;</text>
+                          <real id="RHS">
+                            <expression>
+                              <reference keypath="game.attributes.id106406" />
+                            </expression>
+                          </real>
+                        </attributes>
+                      </predicate>
+                    </condition>
+                  </conditions>
+                  <behaviors>
+                    <behavior id="id821842" class="SaveAttributeAction" enabled="true">
+                      <attributes>
+                        <text id="name">Save Attribute</text>
+                        <text id="bundleName">SaveAttribute.behavior</text>
+                        <text id="targetAttribute">game.attributes.id106406</text>
+                        <text id="key">"HighestDistance"</text>
                       </attributes>
                     </behavior>
                   </behaviors>

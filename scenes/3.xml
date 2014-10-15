@@ -3,6 +3,32 @@
   <layers>
     <layer id="id644215">
       <actors>
+        <actor id="id799503" prototype="id471631">
+          <attributes>
+            <point id="position">
+              <real id="x">917.727954971858</real>
+              <real id="y">328.004376367615</real>
+            </point>
+            <size id="size">
+              <real id="width">950</real>
+              <real id="height">488</real>
+            </size>
+            <angle id="rotation">0</angle>
+            <image id="image">PauseBG</image>
+          </attributes>
+          <aspects>
+            <graphics>
+              <attributes>
+                <integer id="tileWidth" name="tileWidth">0</integer>
+                <integer id="tileHeight" name="tileHeight">0</integer>
+              </attributes>
+            </graphics>
+            <motion />
+            <physics>
+              <attributes />
+            </physics>
+          </aspects>
+        </actor>
         <actor id="id895239" prototype="id119004">
           <attributes>
             <point id="position">
@@ -16,6 +42,7 @@
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">2</integer>
             <text id="name">PauseMenuElements Copy 4</text>
+            <image id="image">Button_Quit</image>
           </attributes>
           <aspects>
             <graphics>
@@ -43,6 +70,7 @@
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">3</integer>
             <text id="name">PauseMenuElements Copy 3</text>
+            <image id="image">Button_Resume</image>
           </attributes>
           <aspects>
             <graphics>
@@ -70,6 +98,7 @@
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">1</integer>
             <text id="name">PauseMenuElements Copy 2</text>
+            <image id="image">Button_Retry</image>
           </attributes>
           <aspects>
             <graphics>
@@ -111,32 +140,6 @@
             </physics>
           </aspects>
         </actor>
-        <actor id="id799503" prototype="id471631">
-          <attributes>
-            <point id="position">
-              <real id="x">917.727954971858</real>
-              <real id="y">328.004376367615</real>
-            </point>
-            <size id="size">
-              <real id="width">950</real>
-              <real id="height">488</real>
-            </size>
-            <angle id="rotation">0</angle>
-            <image id="image">PauseBG</image>
-          </attributes>
-          <aspects>
-            <graphics>
-              <attributes>
-                <integer id="tileWidth" name="tileWidth">0</integer>
-                <integer id="tileHeight" name="tileHeight">0</integer>
-              </attributes>
-            </graphics>
-            <motion />
-            <physics>
-              <attributes />
-            </physics>
-          </aspects>
-        </actor>
         <actor id="id915903" prototype="id119004">
           <attributes>
             <point id="position">
@@ -149,6 +152,7 @@
             </size>
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">4</integer>
+            <image id="image">PauseTag</image>
           </attributes>
           <aspects>
             <graphics>
@@ -175,6 +179,7 @@
             </size>
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">5</integer>
+            <image id="image">Pause_TreasureTag</image>
           </attributes>
           <aspects>
             <graphics>
@@ -201,6 +206,7 @@
             </size>
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">6</integer>
+            <image id="image">Pause_DistanceTag</image>
           </attributes>
           <aspects>
             <graphics>
