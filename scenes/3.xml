@@ -21,6 +21,7 @@
               <attributes>
                 <integer id="tileWidth" name="tileWidth">0</integer>
                 <integer id="tileHeight" name="tileHeight">0</integer>
+                <boolean id="visible">true</boolean>
               </attributes>
             </graphics>
             <motion />
