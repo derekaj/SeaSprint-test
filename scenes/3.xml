@@ -117,8 +117,8 @@
         <actor id="id206455" prototype="id119004">
           <attributes>
             <point id="position">
-              <real id="x">1224.12195121951</real>
-              <real id="y">244.493741307371</real>
+              <real id="x">1195.12195121951</real>
+              <real id="y">255.493741307371</real>
             </point>
             <size id="size">
               <real id="width">180</real>
@@ -127,6 +127,7 @@
             <angle id="rotation">0</angle>
             <integer id="id132513" name="ElementID">7</integer>
             <text id="name">PauseMenuElements Copy 1</text>
+            <image id="image" />
           </attributes>
           <aspects>
             <graphics>
